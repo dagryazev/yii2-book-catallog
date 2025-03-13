@@ -41,7 +41,13 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'report/top-authors/<year:\d+>' => 'report/top-authors',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'book',
+                    'extraPatterns' => [
+                        'POST subscribe/<authorId:\d+>' => 'subscribe',
+                    ]
+                ],
             ],
         ],
     ],

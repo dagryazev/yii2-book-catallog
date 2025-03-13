@@ -16,8 +16,8 @@ class Author extends ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'required'],
-            [['name'], 'string', 'max' => 255],
+            [['full_name'], 'required'],
+            [['full_name'], 'string', 'max' => 255],
         ];
     }
 

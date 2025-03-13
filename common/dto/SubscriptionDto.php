@@ -2,7 +2,7 @@
 
 namespace common\dto;
 
-class SubscriptionDTO
+class SubscriptionDTO extends BaseDto
 {
     public int $userId;
     public int $authorId;

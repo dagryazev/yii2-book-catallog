@@ -2,7 +2,7 @@
 
 namespace common\dto;
 
-class AuthorDto
+class AuthorDto extends BaseDto
 {
     public int $id;
     public string $full_name;

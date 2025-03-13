@@ -65,7 +65,6 @@ class BookController extends Controller
             return $this->redirect(['book/index']);
         }
 
-        // Проверяем, не подписан ли уже пользователь на книги этого автора
         $existingSubscription = $this->subscriptionRepository->findByUserAndAuthor(Yii::$app->user->id, $authorId);
 
         if (!$existingSubscription) {

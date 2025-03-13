@@ -2,7 +2,7 @@
 
 namespace common\dto;
 
-class BookDto
+class BookDto extends BaseDto
 {
     public function __construct(
         public int $id = 0,
